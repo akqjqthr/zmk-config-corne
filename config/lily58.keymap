@@ -12,14 +12,30 @@
 / {
 //  Homerow mod held behaviour 
     behaviors {
-        hm: homerow_mods {
+        hm1: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_MODS1";
+            #binding-cells = <2>;
+            tapping_term_ms = <250>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        },
+        hm2: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS2";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        },
+        hm3: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS3";
             #binding-cells = <2>;
             tapping_term_ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-        };
+        },
     };
 
 / {
@@ -36,7 +52,7 @@
 			bindings = <
 &kp ESC         &kp N1       &kp N2         &kp N3          &kp N4         &kp N5                                             &kp N6           &kp N7            &kp N8             &kp N9            &kp N0            &kp GRAVE
 &kp TAB         &kp Q        &kp W          &kp E           &kp R          &kp T                                              &kp Y            &kp U             &kp I              &kp O             &kp P             &kp MINUS
-&kp LCTRL       &hm LGUI A   &hm LALT S     &hm LCTL D      &hm LSFT F     &kp G                                              &kp H            &hm LSFT J        &hm LCTL K         &hm LALT L        &hm LGUI SEMI     &kp SQT
+&kp LCTRL       &hm1 LGUI A  &hm1 LALT S    &hm1 LCTL D     &hm2 LSFT F    &kp G                                              &kp H            &hm3 LSFT J       &hm2 LCTL K        &hm1 LALT L       &hm1 LGUI SEMI    &kp SQT
 &kp LSHFT       &kp Z        &kp X          &kp C           &kp V          &kp B           &kp LBKT          &kp RBKT         &kp N            &kp M             &kp COMMA          &kp DOT           &kp FSLH          &kp RSHFT
                              &kp LALT       &mo 1           &kp BSPC       &kp TAB                                            &kp RET          &kp SPACE         &mo 2              &kp RALT
 			>;
