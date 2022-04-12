@@ -16,7 +16,7 @@
             label = "HOMEROW_MODS1";
             #binding-cells = <2>;
             tapping-term-ms = <450>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <-1>;
 						//flavor = "hold-preferred";
 						//flavor = "tap-unless-interrupted";
 						//flavor = "balanced";
@@ -29,7 +29,7 @@
             label = "HOMEROW_MODS2";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <-1>;
 						flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -38,7 +38,7 @@
             label = "HOMEROW_MODS3";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <-1>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
