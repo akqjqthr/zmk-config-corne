@@ -9,22 +9,23 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+//flavor = "hold-preferred";
+//flavor = "tap-unless-interrupted";
+//flavor = "balanced";
+//flavor = "tap-preferred";
+
 / {
     behaviors {
-        hm1: homerow_mods {
+        hm1: hm1 {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS1";
             #binding-cells = <2>;
-            tapping-term-ms = <450>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
-						//flavor = "hold-preferred";
-						//flavor = "tap-unless-interrupted";
-						//flavor = "balanced";
-            //flavor = "tap-preferred";
 						flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hm2: homerow_mods {
+        hm2: hm2 {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS2";
             #binding-cells = <2>;
@@ -33,11 +34,11 @@
 						flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hm3: homerow_mods {
+        hm3: hm3 {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS3";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -71,7 +72,7 @@
 
 &kp ESC         &kp N1       &kp N2         &kp N3          &kp N4         &kp N5                                             &kp N6           &kp N7            &kp N8             &kp N9            &kp N0            &kp GRAVE
 &kp TAB         &kp Q        &kp W          &kp E           &kp R          &kp T                                              &kp Y            &kp U             &kp I              &kp O             &kp P             &kp MINUS
-&kp LCTRL       &hm1 LGUI A  &hm1 LALT S    &hm1 LCTL D     &hm2 LSFT F    &kp G                                              &kp H            &hm3 LSFT J       &hm1 LCTL K        &hm1 LALT L       &hm1 LGUI SEMI    &kp SQT
+&kp LCTRL       &hm3 LGUI A  &hm3 LALT S    &hm3 LCTL D     &hm2 LSFT F    &kp G                                              &kp H            &hm1 LSFT J       &hm3 LCTL K        &hm3 LALT L       &hm3 LGUI SEMI    &kp SQT
 &kp LSHFT       &kp Z        &kp X          &kp C           &kp V          &kp B           &kp LBKT          &kp RBKT         &kp N            &kp M             &kp COMMA          &kp DOT           &kp FSLH          &kp RSHFT
                              &kp LALT       &mo 1           &kp BSPC       &kp TAB                                            &kp RET          &kp SPACE         &mo 2              &kp RALT
 			>;
