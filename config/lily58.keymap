@@ -20,7 +20,8 @@
 						//flavor = "hold-preferred";
 						//flavor = "tap-unless-interrupted";
 						//flavor = "balanced";
-            flavor = "tap-preferred";
+            //flavor = "tap-preferred";
+						flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
         hm2: homerow_mods {
@@ -29,8 +30,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-						//flavor = "balanced";
-            flavor = "tap-preferred";
+						flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
         hm3: homerow_mods {
@@ -39,8 +39,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
-            //flavor = "balanced";
-						flavor = "tap-preferred";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
