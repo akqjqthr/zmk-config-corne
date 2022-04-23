@@ -28,7 +28,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
-						flavor = "tap-preferred";
+			flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
         hm2: hm2 {
@@ -37,7 +37,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-						flavor = "tap-preferred";
+			flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
         hm3: hm3 {
@@ -65,19 +65,34 @@
             tapping-term-ms = <200>;
             bindings = <&kp MINUS>, <&kp EQUAL>;
         };
-        td1: tap_dance_0 {
+        td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
-        td2: tap_dance_0 {
+        td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp GRAVE>;
+        };
+    };
+};
+
+/ {
+    macros {
+        mcr_copy: mcr_copy {
+            label = "mcr_copy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
         };
     };
 };
@@ -109,7 +124,7 @@
 &lt SYS ESC     &kp N1       &kp N2         &kp N3          &kp N4         &kp N5                                             &kp N6           &kp N7            &kp N8             &kp N9            &kp N0            &td0
 &kp TAB         &kp Q        &kp W          &kp E           &kp R          &kp T                                              &kp Y            &kp U             &kp I              &kp O             &kp P             &td1
 &hm3 LCTL LEFT  &hm4 LGUI A  &hm3 LALT S    &hm3 LCTL D     &hm2 LSFT F    &kp G                                              &kp H            &hm1 LSFT J       &hm3 LCTL K        &hm3 LALT L       &hm4 LGUI SEMI    &td2
-&hm3 LSFT RIGHT &kp Z        &kp X          &kp C           &kp V          &kp B           &kp LBKT          &kp RBKT         &kp N            &kp M             &kp COMMA          &kp DOT           &kp FSLH          &kp RSHFT
+&hm3 LSFT RIGHT &kp Z        &kp X          &kp C           &kp V          &kp B           &kp LBKT          &kp RBKT         &kp N            &kp M             &kp COMMA          &kp DOT           &kp FSLH          &hm3 LSFT RIGHT
                              &kp LGUI       &hm4 LALT ESC   &lt NAV BSPC   &lt NUM TAB                                        &lt FNC RET      &lt NAV SPACE     &kp DEL            &kp RALT
 			>;
 
@@ -127,7 +142,7 @@
 &trans         &trans         &trans         &trans          &trans          &trans                                                 &trans              &trans              &trans             &trans            &trans              &trans
 &trans         &trans         &trans         &trans          &trans          &trans                                                 &trans              &trans              &kp UP             &trans            &trans              &trans
 &trans         &trans         &kp LALT       &kp LCTRL       &kp LSHFT       &trans                                                 &trans              &kp LEFT            &kp DOWN           &kp RIGHT         &trans              &trans
-&trans         &trans         &trans         &trans          &trans          &trans            &trans            &trans             &trans              &trans              &trans             &trans            &trans              &trans
+&trans         &trans         &trans         &mcr_copy       &trans          &trans            &trans            &trans             &trans              &trans              &trans             &trans            &trans              &trans
                                              &trans          &trans          &trans            &trans            &trans             &trans              &trans              &trans
 			>;
 
