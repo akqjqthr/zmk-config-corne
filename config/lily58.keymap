@@ -161,7 +161,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <1000>;
 };
 
 &mwh {
@@ -187,9 +187,9 @@
 		nav_layer {
 			bindings = <
 &trans         &trans         &trans         &trans          &trans          &trans                                                 &trans              &trans              &trans             &trans            &trans              &trans
-&kp CAPS       &trans         &trans         &trans          &mmv MOVE_UP    &mmv MOVE_DOWN                                         &trans              &kp PG_UP           &kp UP             &kp PG_DN         &trans              &trans
-&trans         &mcr_all       &kp LALT       &kp LCTRL       &kp LSHFT       &trans                                                 &kp HOME            &kp LEFT            &kp DOWN           &kp RIGHT         &kp END             &trans
-&trans         &mcr_undo      &mcr_cut       &mcr_copy       &mcr_paste      &mcr_redo         &trans            &trans             &trans              &trans              &trans             &trans            &trans              &trans
+&kp CAPS       &trans         &mkp MCLK      &mkp RCLK       &mkp LCLK       &mwh SCROLL_UP                                         &mwh SCROLL_UP      &mwh SCROLL_LEFT    &mmv MOVE_UP       &mwh SCROLL_RIGHT &trans              &trans
+&trans         &mcr_all       &kp LALT       &kp LCTRL       &kp LSHFT       &mwh SCROLL_DOWN                                       &mwh SCROLL_DOWN    &mmv MOVE_LEFT      &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &kp END             &trans
+&trans         &mcr_undo      &mcr_cut       &mcr_copy       &mcr_paste      &mcr_redo         &trans            &trans             &kp HOME            &kp LEFT            &kp DOWN           &kp UP            &kp RIGHT           &kp END
                                              &trans          &trans          &kp BSPC          &trans            &trans             &kp SPACE           &trans              &trans
 			>;
 
