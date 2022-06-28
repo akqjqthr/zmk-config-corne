@@ -190,7 +190,7 @@
 &kp CAPS       &trans         &mkp MCLK      &mkp RCLK       &mkp LCLK       &mwh SCROLL_UP                                         &mwh SCROLL_UP      &mwh SCROLL_LEFT    &mmv MOVE_UP       &mwh SCROLL_RIGHT &trans              &trans
 &trans         &mcr_all       &kp LALT       &kp LCTRL       &kp LSHFT       &mwh SCROLL_DOWN                                       &mwh SCROLL_DOWN    &mmv MOVE_LEFT      &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &kp END             &trans
 &trans         &mcr_undo      &mcr_cut       &mcr_copy       &mcr_paste      &mcr_redo         &trans            &trans             &kp HOME            &kp LEFT            &kp DOWN           &kp UP            &kp RIGHT           &kp END
-                                             &trans          &trans          &kp BSPC          &trans            &trans             &kp SPACE           &trans              &trans
+                                             &trans          &trans          &kp BSPC          &trans            &trans             &kp SPACE           &mkp LCLK           &mkp RCLK
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
