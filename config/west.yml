@@ -3,11 +3,11 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: zmkfirmware-mouse
-      url-base: https://github.com/ftc/zmk/tree/mouse-ftc
+      url-base: https://github.com/ftc/zmk
   projects:
     - name: zmk
       remote: zmkfirmware-mouse
-      revision: main
+      revision: mouse-ftc
       import: app/west.yml
   self:
     path: config
