@@ -172,10 +172,12 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    delay-ms = <0>;
+    time-to-max-speed-ms = <300>;
 };
 
 &mwh {
+    delay-ms = <0>;
     acceleration-exponent=<1>;
 };
 
