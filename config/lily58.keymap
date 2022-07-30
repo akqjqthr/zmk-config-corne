@@ -25,6 +25,17 @@
 //flavor = "tap-preferred";
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <N M>;
+            bindings = <&kp RALT>;
+        };
+    };
+};
+
+/ {
     behaviors {
         hm1: hm1 {
             compatible = "zmk,behavior-hold-tap";
