@@ -21,16 +21,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_tog_nav {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&tog NAV>;
-        };
-        combo_tog_nav2 {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&tog NAV>;
-        };
         combo_ralt {
             timeout-ms = <50>;
             key-positions = <28 29>;
